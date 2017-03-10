@@ -31,3 +31,15 @@ def stock_count(pet_shop)
   # end
   # return count
 end
+
+#How many of each breed is there?
+def pets_by_breed(pet_shop, dog_breed)
+  breed_array = []
+    for animals in pet_shop[:pets]
+      if animals[:breed] == dog_breed
+        breed_array << animals
+      end
+    end
+  return breed_array
+end
+
