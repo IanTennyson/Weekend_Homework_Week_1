@@ -34,12 +34,28 @@ end
 
 #How many of each breed is there?
 def pets_by_breed(pet_shop, dog_breed)
+  #Creates an empty breed array
   breed_array = []
-    for animals in pet_shop[:pets]
-      if animals[:breed] == dog_breed
-        breed_array << animals
+  #for every pet in this area of the shop 
+    for pets in pet_shop[:pets]
+#if the pets breed is equal to the user input
+      if pets[:breed] == dog_breed
+        #the pets breed is added to the array
+        breed_array << pets
       end
     end
+    #return the breed array
   return breed_array
 end
+                    #@pet_shop, "Arthur"
+def find_pet_by_name(pet_shop, pet_name)
 
+
+  for pet in pet_shop[:pets]
+#the loop tried 6 times and couldn't find "Fred" so it moved outside and finds a return nil statement.
+    if pet[:name] == pet_name
+      return pet
+    end
+  end
+  return nil
+end
